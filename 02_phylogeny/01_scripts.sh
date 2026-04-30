@@ -1,4 +1,8 @@
 
+scp -r lh106@nots.rice.edu:/scratch/lh106/Dog_Selection/Relate/input_final_Apr29_dogs/scripts/samplelist_DOGS_final.txt ~/Desktop
+
+/scratch/lh106/Dog_Selection/Relate/input_final_Apr29_dogs/scripts/samplelist_DOGS_final.txt
+
 
 mamba create -n buscogeny -c bioconda -c conda-forge busco
 
@@ -18,10 +22,10 @@ python buscogeny.py --help
 #!/bin/bash
 #SBATCH --job-name=guamrail
 #SBATCH --account=commons
-#SBATCH --partition=commons
+#SBATCH --partition=long
 #SBATCH --ntasks=1
-#SBATCH --mem=30G
-#SBATCH --time=14:00:00
+#SBATCH --mem=50G
+#SBATCH --time=2-23:00:00
 #SBATCH --output=/home/lh106/Rice/Dog_Selection/slurmout/guamrail.out
 #SBATCH --error=/home/lh106/Rice/Dog_Selection/slurmout/guamrail.err
 
